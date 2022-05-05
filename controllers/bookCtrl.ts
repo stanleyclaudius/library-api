@@ -1,11 +1,11 @@
 import { Request, Response } from 'express'
-import { APIFeatures } from '../utils/APIFeatures'
+import APIFeatures from '../utils/APIFeatures'
 import Book from './../models/Book'
 
 const bookCtrl = {
   getAllBooks: async(req: Request, res: Response) => {
     try {
-      const features = new (APIFeatures as any)(Book.find(), req.query).paginate().sort()
+      const features = new APIFeatures(Book.find(), req.query).paginate().sort()
 
       const result = await Promise.allSettled([
         features.query,

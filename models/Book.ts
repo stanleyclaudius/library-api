@@ -32,6 +32,14 @@ const bookSchema = new mongoose.Schema({
   qty: {
     type: Number,
     required: true
+  },
+  images: {
+    type: Array,
+    required: true
+  },
+  category: {
+    type: Array,
+    required: true
   }
 }, {
   timestamps: true

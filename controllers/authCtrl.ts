@@ -40,7 +40,7 @@ const authCtrl = {
       const newUser = new User({
         name,
         dob,
-        gender,
+        gender: gender.toLowerCase(),
         email,
         password: passwordHash
       })

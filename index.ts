@@ -21,6 +21,7 @@ app.use(morgan('dev'))
 app.use('/api/v1/auth', routes.auth)
 app.use('/api/v1/user', routes.user)
 app.use('/api/v1/book', routes.book)
+app.use('/api/v1/books_borrowed', routes.booksBorrowed)
 
 connectDB()
 app.listen(process.env.PORT, () => console.log(`Server is running on PORT ${process.env.PORT}`))

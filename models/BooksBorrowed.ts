@@ -1,12 +1,12 @@
 import mongoose from 'mongoose'
 
 const booksBorrowedSchema = new mongoose.Schema({
-  user_id: {
+  user: {
     type: mongoose.Types.ObjectId,
     ref: 'user',
     required: true
   },
-  book_id: {
+  book: {
     type: mongoose.Types.ObjectId,
     ref: 'book',
     required: true

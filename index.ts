@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import dotenv from 'dotenv'
 import connectDB from './config/db'
 import routes from './routes'
+import path from 'path'
 
 dotenv.config({
   path: './config/.env'
@@ -21,13 +22,15 @@ app.use(cors({
 app.use(cookieParser())
 app.use(morgan('dev'))
 
-app.get('/', (req, res) => {
-  res.json({ msg: 'Hello, docker aaa!' })
-})
 app.use('/api/v1/auth', routes.auth)
 app.use('/api/v1/user', routes.user)
 app.use('/api/v1/book', routes.book)
 app.use('/api/v1/books_borrowed', routes.booksBorrowed)
+
+app.use(express.static('view/html'))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'view', 'html', 'index.html'))
+})
 
 connectDB()
 app.listen(process.env.PORT, () => console.log(`Server is running on PORT ${process.env.PORT}`))

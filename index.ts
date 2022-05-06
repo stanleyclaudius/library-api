@@ -29,7 +29,11 @@ app.use('/api/v1/books_borrowed', routes.booksBorrowed)
 
 app.use(express.static('view'))
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'view', 'html', 'index.html'))
+  if (process.env.NODE_ENV === 'production') {
+    res.sendFile(path.join(__dirname, '../view', 'html', 'index.html'))
+  } else {
+    res.sendFile(path.join(__dirname, 'view', 'html', 'index.html'))
+  }
 })
 
 connectDB()

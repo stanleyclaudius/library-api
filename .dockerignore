@@ -3,4 +3,4 @@ node_modules
 Dockerfile.dev
 Dockerfile.prod
 README.md
-/src/config/.env
+/config/.env

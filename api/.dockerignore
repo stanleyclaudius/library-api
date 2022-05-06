@@ -1,0 +1,6 @@
+node_modules
+.gitignore
+Dockerfile.dev
+Dockerfile.prod
+README.md
+/src/config/.env

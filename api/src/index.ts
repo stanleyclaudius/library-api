@@ -7,7 +7,7 @@ import connectDB from './config/db'
 import routes from './routes'
 
 dotenv.config({
-  path: './config/.env'
+  path: './src/config/.env'
 })
 
 const app = express()
@@ -18,6 +18,9 @@ app.use(cors())
 app.use(cookieParser())
 app.use(morgan('dev'))
 
+app.get('/', (req, res) => {
+  res.json({ msg: 'Hello, docker aaa!' })
+})
 app.use('/api/v1/auth', routes.auth)
 app.use('/api/v1/user', routes.user)
 app.use('/api/v1/book', routes.book)

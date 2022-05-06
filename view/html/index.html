@@ -4,9 +4,508 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" href="./../img/favicon.ico">
+  <link rel="stylesheet" href="./../css/index.css">
+  <title>Library API Documentation</title>
 </head>
 <body>
-  <h1>Welcome to simple library API</h1>
+  <div class='container'>
+    <header>
+      <img src='./../img/logo.png' alt='Library API - Stanley Claudius' width="40">
+      <h1>Library API</h1>
+    </header>
+    <main>
+      <div>
+        <div class='header-link'>
+          <a href="">Overview</a>
+        </div>
+        <div class='header-link'>
+          <a href="">
+            Authentication Endpoint
+          </a>
+          <div class='header-sublink'>
+            <a href=''>Register</a>
+            <a href="">Login</a>
+            <a href="">Logout</a>
+          </div>
+        </div>
+        <div class='header-link'>
+          <a href="">Book Endpoint</a>
+          <div class='header-sublink'>
+            <a href=''>Get Books</a>
+            <a href="">Get Book By Id</a>
+            <a href="">Search Book</a>
+            <a href=''>Create Book</a>
+            <a href="">Update Book</a>
+            <a href="">Delete Book</a>
+            <a href="">Borrow Book</a>
+            <a href="">Return Borrowed Book</a>
+            <a href="">Get Borrowed Book</a>
+            <a href="">Get Returned Book</a>
+          </div>
+        </div>
+        <div class='header-link'>
+          <a href="">User Endpoint</a>
+          <div class='header-sublink'>
+            <a href="">Edit Profile</a>
+            <a href="">Change Password</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <section>
+          <h3>Overview</h3>
+          <p class='description'>
+            <strong>Library API</strong> is an API that created for a school or college library that wanted to create an application that have borrow and return books functionality for their user. This API also allowed their user to do authentication features, such as login and register, so, the library can just uses the API without implementing basic features again for the application.
+          </p>
+          <p class="description">
+            <strong>BASE URL</strong> for this API is
+          </p>
+          <div class='code-placeholder'>
+            <p>https://simple-library-api.herokuapp.com</p>
+          </div>
+        </section>
+        <section>
+          <h3>Authentication Endpoint</h3>
+          <p class="description">
+            <strong>Library API</strong> support several authentication functionality, such as login, register, and logout endpoint. Below is the endpoint detail for each feature.
+          </p>
+          <section class='subsection'>
+            <div class='title'>
+              <h4>Register</h4>
+              <p class='badge post'>POST</p>
+            </div>
+            <p class='description'>
+              <strong>Register</strong> endpoint is used to register user data, so they can login to the application. Below is the example request and response to call this endpoint. By default, every registered user will have <strong>student</strong> role. The role should be manually changed in the database become <strong>admin</strong> if necessary.
+            </p>
+            <div class='req-res-block'>
+              <div>
+                <p>Body</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"name": "User 1",</p>
+                <p>"gender": "male",</p>
+                <p>"email": "user1@gmail.com",</p>
+                <p>"password": "user1@1234",</p>
+                <p>"dob": "2001-09-19",</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class='subsection'>
+            <div class='title'>
+              <h4>Login</h4>
+              <p class="badge post">POST</p>
+            </div>
+            <p class="description">
+              <strong>Login</strong> endpoint is used to sign user in to the application. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"email": "user1@gmail.com",</p>
+                <p>"password": "user1@1234"</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class='subsection'>
+            <div class="title">
+              <h4>Logout</h4>
+              <p class='badge get'>GET</p>
+            </div>
+            <p class="description">
+              <strong>Logout</strong> endpoint is used to sign user out from the application. Below is the example response for this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"msg": "Logout success."</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h3>Book Endpoint</h3>
+          <p class="description">
+            <strong>Library API</strong> support several book-related functionality, such as get books, get book by id, search book, create book, update book, and delete book endpoint. Below is the endpoint detail for each feature.
+          </p>
+          <section class="subsection">
+            <div class="title">
+              <h4>Get Books</h4>
+              <p class="badge get">GET</p>
+            </div>
+            <p class="description">
+              <strong>Get Books</strong> endpoint is used to retrieve all books from the database. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Query String</p>
+                <p>Response</p>
+              </div>
+              <div class='table-container'>
+                <table border='1'>
+                  <thead>
+                    <tr>
+                      <th>Query String</th>
+                      <th>Required</th>
+                      <th>Default Value</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>limit</td>
+                      <td>False</td>
+                      <td>2</td>
+                      <td>Set query limit from database</td>
+                    </tr>
+                    <tr>
+                      <td>page</td>
+                      <td>False</td>
+                      <td>1</td>
+                      <td>Set page for pagination purpose</td>
+                    </tr>
+                    <tr>
+                      <td>sort</td>
+                      <td>False</td>
+                      <td>-createdAt</td>
+                      <td>Sort query by book attribute (Put - sign for descending)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Get Book By Id</h4>
+              <p class="badge get">GET</p>
+            </div>
+            <p class="description">
+              <strong>Get Book By Id</strong> endpoint is used to retrieve specific book by it's id from database. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"book": {</p>
+                <div class='increase-indent'>
+                  <p>"_id": "62737c97e3e97a69be1cc7e5",</p>
+                  <p>"title": "Book 3",</p>
+                  <p>"description": "Description for Book 3",</p>
+                  <p>"author": "Author 1",</p>
+                  <p>"publisher": "Publisher 1",</p>
+                  <p>"date_published": "2022-05-04",</p>
+                  <p>"total_page": 300,</p>
+                  <p>"isbn": "148182-782191-110818",</p>
+                  <p>"qty": 10,</p>
+                  <p>"images": [</p>
+                  <div class="increase-indent">
+                    <p>"https://google.com",</p>
+                    <p>"https://yahoo.com"</p>
+                  </div>
+                  <p>],</p>
+                  <p>"category": [</p>
+                  <div class="increase-indent">
+                    <p>"Romance"</p>
+                  </div>
+                  <p>],</p>
+                  <p>"createdAt": "2022-05-05T07:28:23.316Z",</p>
+                  <p>"updatedAt": "2022-05-05T08:48:25.832Z",</p>
+                  <p>"__v": 0</p>
+                </div>
+                <p>}</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Search Book</h4>
+              <p class="badge get">GET</p>
+            </div>
+            <p class="description">
+              <strong>Search Book</strong> endpoint is used to search book by keyword from database. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Query String</p>
+                <p>Response</p>
+              </div>
+              <div class='table-container'>
+                <table border='1'>
+                  <thead>
+                    <tr>
+                      <th>Query String</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>keyword</td>
+                      <td>True</td>
+                      <td>Search book keyword</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Create Book</h4>
+              <p class="badge post">POST</p>
+            </div>
+            <p class="description">
+              <strong>Create Book</strong> endpoint is used to add new book to database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"title": "Book 4",</p>
+                <p>"description": "Description for Book 4",</p>
+                <p>"author": "Author 3",</p>
+                <p>"publisher": "Publisher 3",</p>
+                <p>"date_published": "2022-05-04",</p>
+                <p>"total_page": 400,</p>
+                <p>"isbn": "148182-782191-110818",</p>
+                <p>"qty": 10,</p>
+                <p>"category": ["Geography"],</p>
+                <p>"images": ["https://google.com", "https://yahoo.com"]</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Update Book</h4>
+              <p class="badge patch">PATCH</p>
+            </div>
+            <p class="description">
+              <strong>Update Book</strong> endpoint is used to update book by it's ID to database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"title": "Book 12 updated",</p>
+                <p>"author": "Author 4"</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class='subsection'>
+            <div class='title'>
+              <h4>Delete Book</h4>
+              <p class="badge delete">DELETE</p>
+            </div>
+            <p class="description">
+              <strong>Delete Book</strong> endpoint is used to delete book by it's ID from database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div class='table-container'>
+                <table border='1'>
+                  <thead>
+                    <tr>
+                      <th>Key</th>
+                      <th>Value Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Authorization</td>
+                      <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Borrow Book</h4>
+              <p class="badge post">POST</p>
+            </div>
+            <p class="description">
+              <strong>Borrow Book</strong> endpoint allowed student to borrow book from application. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"book_id": "62737c97e3e97a69be1cc7e5"</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Return Borrowed Book</h4>
+              <p class="badge post">POST</p>
+            </div>
+            <p class="description">
+              <strong>Return Borrowed Book</strong> endpoint allowed student to return the borrowed book to the library by providing the <strong>borrowed_id</strong> that retrieve when borrowing book. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"borrowed_id": "6273923492b8b06a3fb95ae9"</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Get Borrowed Book</h4>
+              <p class="badge get">GET</p>
+            </div>
+            <p class="description">
+              <strong>Get Borrowed Book</strong> endpoint is used to retrieve all books borrowed by the current login student. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div class='table-container'>
+                <table border='1'>
+                  <thead>
+                    <tr>
+                      <th>Key</th>
+                      <th>Value Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Authorization</td>
+                      <td>Access token that retrieved from login response.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Get Returned Book</h4>
+              <p class="badge get">GET</p>
+            </div>
+            <p class="description">
+              <strong>Get Returned Book</strong> endpoint is used to retrieve all returned books by the current login student. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div class='table-container'>
+                <table border='1'>
+                  <thead>
+                    <tr>
+                      <th>Key</th>
+                      <th>Value Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Authorization</td>
+                      <td>Access token that retrieved from login response.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h3>User Endpoint</h3>
+          <p class="description">
+            <strong>Library API</strong> support several user-related functionality, such as edit profile, and change password endpoint. Below is the endpoint detail for each feature.
+          </p>
+          <section class="subsection">
+            <div class="title">
+              <h4>Edit Profile</h4>
+              <p class="badge patch">PATCH</p>
+            </div>
+            <p class="description">
+              <strong>Edit Profile</strong> endpoint allowed user to change their personal information, such as <strong>name</strong>, and <strong>avatar</strong> inside the application. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"name": "Updated Name"</p>
+                <p>"avatar": "https://res.cloudinary.com/avatar/updated-avatar.png"</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+          <section class="subsection">
+            <div class="title">
+              <h4>Change Password</h4>
+              <p class="badge patch">PATCH</p>
+            </div>
+            <p class="description">
+              <strong>Change Password</strong> endpoint allowed user to change their password inside the application. Below is the example request and response to call this endpoint.
+            </p>
+            <div class="req-res-block">
+              <div>
+                <p>Body</p>
+                <p>Header</p>
+                <p>Response</p>
+              </div>
+              <div>
+                <p>{</p>
+                <p>"currPassword": "current_password"</p>
+                <p>"newPassword": "new_password</p>
+                <p>}</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

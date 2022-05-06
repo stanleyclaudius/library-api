@@ -27,7 +27,7 @@ app.use('/api/v1/user', routes.user)
 app.use('/api/v1/book', routes.book)
 app.use('/api/v1/books_borrowed', routes.booksBorrowed)
 
-app.use(express.static('view/html'))
+app.use(express.static('view'))
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'view', 'html', 'index.html'))
 })

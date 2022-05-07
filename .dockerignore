@@ -1,6 +1,6 @@
 node_modules
 .gitignore
+.gitattributes
 Dockerfile.dev
 Dockerfile.prod
 README.md
-/config/.env

@@ -27,7 +27,13 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  word-wrap: break-word;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.code-placeholder::-webkit-scrollbar {
+  display: none;
 }
 
 .endpoint-placeholder {
@@ -35,6 +41,7 @@ a {
   padding: 3px 10px;
   border-radius: 5px;
   word-wrap: break-word;
+  width: fit-content;
 }
 
 .table-container {
@@ -126,6 +133,12 @@ a {
 
 .subsection .title {
   display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.subsection .title div {
+  display: flex;
   align-items: center;
   gap: 10px;
 }
@@ -193,6 +206,7 @@ main > div:nth-child(1) {
   border-right: 1px solid rgb(112, 112, 112);
   padding: 20px 40px 20px 40px;
   overflow: auto;
+  display: none;
 }
 
 main > div:nth-child(1)::-webkit-scrollbar {
@@ -268,10 +282,6 @@ main > div:nth-child(2) section:not(:last-child) {
   margin-left: 30px;
 }
 
-.sidebar-link-active {
-  text-decoration: underline;
-}
-
 .req-res-link-active {
   position: relative;
 }
@@ -285,4 +295,15 @@ main > div:nth-child(2) section:not(:last-child) {
   left: 0;
   margin-top: 3px;
   background: rgb(255, 90, 25);
+}
+
+@media (min-width: 700px) {
+  main > div:nth-child(1) {
+    display: block;
+  }
+
+  .subsection .title {
+    flex-direction: row;
+    align-items: center;
+  }
 }

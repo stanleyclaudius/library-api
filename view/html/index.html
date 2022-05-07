@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="./../img/favicon.ico">
-  <link rel="stylesheet" href="./../css/index.css">
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='./../css/index.css'>
+  <link rel='icon' href='./../img/favicon.ico'>
   <title>Library API Documentation</title>
 </head>
 <body>
@@ -24,91 +24,91 @@
     <main>
       <div>
         <div class='header-link'>
-          <a href="#overview" id='overview-link'>
-            <i class="fa fa-info-circle"></i>
+          <a href='#overview'>
+            <i class='fa fa-info-circle'></i>
             Overview
           </a>
         </div>
         <div class='header-link'>
-          <a href="#authentication" id='authentication-link'>
+          <a href='#authentication'>
             <i class='fa fa-solid fa-key'></i>
             Authentication Endpoint
           </a>
           <div class='header-sublink'>
-            <a href='#register' id="register-link">
+            <a href='#register'>
               <i class="fa fa-user-plus"></i>
               Register
             </a>
-            <a href="#login" id='login-link'>
-              <i class="fa fa-solid fa-sign-in"></i>
+            <a href='#login'>
+              <i class='fa fa-solid fa-sign-in'></i>
               Login
             </a>
-            <a href="#logout" id='logout-link'>
-              <i class="fa fa-sign-out"></i>
+            <a href='#logout'>
+              <i class='fa fa-sign-out'></i>
               Logout
             </a>
           </div>
         </div>
         <div class='header-link'>
-          <a href="#book" id='book-link'>
-            <i class="fa fa-book"></i>
+          <a href='#book'>
+            <i class='fa fa-book'></i>
             Book Endpoint
           </a>
           <div class='header-sublink'>
-            <a href='#get-books' id='get-books-link'>
-              <i class="fa fa-book"></i>
+            <a href='#get-books'>
+              <i class='fa fa-book'></i>
               Get Books
             </a>
-            <a href="#get-book-by-id" id='get-book-by-id-link'>
-              <i class="fa fa-book"></i>
+            <a href='#get-book-by-id'>
+              <i class='fa fa-book'></i>
               Get Book By Id
             </a>
-            <a href="#search-book" id='search-book-link'>
-              <i class="fa fa-search"></i>
+            <a href='#search-book'>
+              <i class='fa fa-search'></i>
               Search Book
             </a>
-            <a href='#create-book' id='create-book-link'>
-              <i class="fa fa-plus-circle"></i>
+            <a href='#create-book'>
+              <i class='fa fa-plus-circle'></i>
               Create Book
             </a>
-            <a href="#update-book" id='update-book-link'>
-              <i class="fa fa-pencil-square-o"></i>
+            <a href='#update-book'>
+              <i class='fa fa-pencil-square-o'></i>
               Update Book
             </a>
-            <a href="#delete-book" id='delete-book-link'>
-              <i class="fa fa-trash"></i>
+            <a href='#delete-book'>
+              <i class='fa fa-trash'></i>
               Delete Book
             </a>
-            <a href="#borrow-book" id='borrow-book-link'>
-              <i class="fa fa-file-text"></i>
+            <a href='#borrow-book'>
+              <i class='fa fa-file-text'></i>
               Borrow Book
             </a>
-            <a href="#return-borrowed-book" id='return-borrowed-book-link'>
-              <i class="fa fa-clipboard"></i>
+            <a href='#return-borrowed-book'>
+              <i class='fa fa-clipboard'></i>
               Return Borrowed Book
             </a>
-            <a href="#get-borrowed-book" id='get-borrowed-book-link'>
-              <i class="fa fa-book"></i>
+            <a href='#get-borrowed-book'>
+              <i class='fa fa-book'></i>
               Get Borrowed Book
             </a>
-            <a href="#get-returned-book" id='get-returned-book-link'>
-              <i class="fa fa-book"></i>
+            <a href='#get-returned-book'>
+              <i class='fa fa-book'></i>
               Get Returned Book
             </a>
           </div>
         </div>
         <div class='header-link'>
-          <a href="#user" id='user-link'>
-            <i class="fa fa-user"></i>
+          <a href='#user'>
+            <i class='fa fa-user'></i>
             User Endpoint
           </a>
           <div class='header-sublink'>
-            <a href="#edit-profile" id='edit-profile-link'>
-              <i class="fa fa-pencil"></i>
+            <a href='#edit-profile'>
+              <i class='fa fa-pencil'></i>
               Edit Profile
             </a>
-            <a href="#change-password" id='change-password-link'>
-              <i class="fa fa-unlock-alt"></i>
+            <a href='#change-password'>
+              <i class='fa fa-unlock-alt'></i>
               Change Password
             </a>
           </div>
@@ -120,7 +120,7 @@
           <p class='description'>
             <strong>Library API</strong> is an API that created for a school or college library that wanted to create an application that have borrow and return books functionality for their user. This API also allowed their user to do authentication features, such as login and register, so, the library can just uses the API without implementing basic features again for the application.
           </p>
-          <p class="description">
+          <p class='description'>
             <strong>BASE URL</strong> for this API is
           </p>
           <div class='code-placeholder'>
@@ -129,13 +129,15 @@
         </section>
         <section id='authentication'>
           <h3>Authentication Endpoint</h3>
-          <p class="description">
+          <p class='description'>
             <strong>Library API</strong> support several authentication functionality, such as login, register, and logout endpoint. Below is the endpoint detail for each feature.
           </p>
           <section class='subsection' id='register'>
             <div class='title'>
-              <h4>Register</h4>
-              <p class='badge post'>POST</p>
+              <div>
+                <h4>Register</h4>
+                <p class='badge post'>POST</p>
+              </div>
               <p class='endpoint-placeholder'>/api/v1/auth/register</p>
             </div>
             <p class='description'>
@@ -156,24 +158,26 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">
-              Example URL for register endpoint:
+            <p class='description'>
+              Example URL for <strong>Register</strong> endpoint:
             </p>
-            <div class="code-placeholder">
-              <p class="badge post">POST</p>
+            <div class='code-placeholder'>
+              <p class='badge post'>POST</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/auth/register</p>
             </div>
           </section>
           <section class='subsection' id='login'>
             <div class='title'>
-              <h4>Login</h4>
-              <p class="badge post">POST</p>
-              <p class="endpoint-placeholder">/api/v1/auth/login</p>
+              <div>
+                <h4>Login</h4>
+                <p class='badge post'>POST</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/auth/login</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Login</strong> endpoint is used to sign user in to the application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block login-req-res-block">
+            <div class='req-res-block login-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Response</p>
@@ -185,24 +189,26 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for login endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge post">POST</p>
+            <p class='description'>Example URL for <strong>Login</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge post'>POST</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/auth/login</p>
             </div>
           </section>
           <section class='subsection' id='logout'>
-            <div class="title">
-              <h4>Logout</h4>
-              <p class='badge get'>GET</p>
-              <p class="endpoint-placeholder">/api/v1/auth/logout</p>
+            <div class='title'>
+              <div>
+                <h4>Logout</h4>
+                <p class='badge get'>GET</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/auth/logout</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Logout</strong> endpoint is used to sign user out from the application. Below is the example response for this endpoint.
             </p>
-            <div class="req-res-block logout-req-res-block">
+            <div class='req-res-block logout-req-res-block'>
               <div>
-                <p class="req-res-link-active">Header</p>
+                <p class='req-res-link-active'>Header</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -222,28 +228,30 @@
                 </table>
               </div>
             </div>
-            <p class="description">Example URL for logout endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge get">GET</p>
+            <p class='description'>Example URL for <strong>Logout</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/auth/logout</p>
             </div>
           </section>
         </section>
         <section id='book'>
           <h3>Book Endpoint</h3>
-          <p class="description">
+          <p class='description'>
             <strong>Library API</strong> support several book-related functionality, such as get books, get book by id, search book, create book, update book, and delete book endpoint. Below is the endpoint detail for each feature.
           </p>
-          <section class="subsection" id='get-books'>
-            <div class="title">
-              <h4>Get Books</h4>
-              <p class="badge get">GET</p>
-              <p class="endpoint-placeholder">/api/v1/book</p>
+          <section class='subsection' id='get-books'>
+            <div class='title'>
+              <div>
+                <h4>Get Books</h4>
+                <p class='badge get'>GET</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/book</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Get Books</strong> endpoint is used to retrieve all books from the database. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block get-books-req-res-block">
+            <div class='req-res-block get-books-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Query String</p>
                 <p>Response</p>
@@ -280,33 +288,35 @@
                   </tbody>
                 </table>
               </div>
-              <p class="description">Several example URL for get books endpoint:</p>
-              <div class="code-placeholder">
-                <p class="badge get">GET</p>
-                <p>https://simple-library-api.herokuapp.com/api/v1/book</p>
-              </div>
-              <div class="code-placeholder">
-                <p class="badge get">GET</p>
-                <p>https://simple-library-api.herokuapp.com/api/v1/book?limit=5&page=2&sort=publisher</p>
-              </div>
-              <div class="code-placeholder">
-                <p class="badge get">GET</p>
-                <p>https://simple-library-api.herokuapp.com/api/v1/book?page=2</p>
-              </div>
+            </div>
+            <p class='description'>Several example URL for <strong>Get Books</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book</p>
+            </div>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book?limit=5&page=2&sort=publisher</p>
+            </div>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book?page=2</p>
             </div>
           </section>
-          <section class="subsection" id='get-book-by-id'>
-            <div class="title">
-              <h4>Get Book By Id</h4>
-              <p class="badge get">GET</p>
-              <p class="endpoint-placeholder">/api/v1/book/:id</p>
+          <section class='subsection' id='get-book-by-id'>
+            <div class='title'>
+              <div>
+                <h4>Get Book By Id</h4>
+                <p class='badge get'>GET</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/book/:id</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Get Book By Id</strong> endpoint is used to retrieve specific book by it's id from database. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class='req-res-block'>
               <div>
-                <p class="req-res-link-active">Response</p>
+                <p class='req-res-link-active'>Response</p>
               </div>
               <div>
                 <p>{</p>
@@ -322,13 +332,13 @@
                   <p>"isbn": "148182-782191-110818",</p>
                   <p>"qty": 10,</p>
                   <p>"images": [</p>
-                  <div class="increase-indent">
+                  <div class='increase-indent'>
                     <p>"https://google.com",</p>
                     <p>"https://yahoo.com"</p>
                   </div>
                   <p>],</p>
                   <p>"category": [</p>
-                  <div class="increase-indent">
+                  <div class='increase-indent'>
                     <p>"Romance"</p>
                   </div>
                   <p>],</p>
@@ -340,24 +350,26 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for get book by id endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge get">GET</p>
+            <p class='description'>Example URL for <strong>Get Book By Id</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/book/62737c97e3e97a69be1cc7e5</p>
             </div>
           </section>
-          <section class="subsection" id='search-book'>
-            <div class="title">
-              <h4>Search Book</h4>
-              <p class="badge get">GET</p>
-              <p class="endpoint-placeholder">/api/v1/book/search</p>
+          <section class='subsection' id='search-book'>
+            <div class='title'>
+              <div>
+                <h4>Search Book</h4>
+                <p class='badge get'>GET</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/book/search</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Search Book</strong> endpoint is used to search book by keyword from database. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block search-book-req-res-block">
+            <div class='req-res-block search-book-req-res-block'>
               <div>
-                <p class="req-res-link-active">Query String</p>
+                <p class='req-res-link-active'>Query String</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -379,22 +391,24 @@
                 </table>
               </div>
             </div>
-            <p class="description">Example URL for search book endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge get">GET</p>
+            <p class='description'>Example URL for <strong>Search Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/book/search?keyword=romance</p>
             </div>
           </section>
-          <section class="subsection" id='create-book'>
-            <div class="title">
-              <h4>Create Book</h4>
-              <p class="badge post">POST</p>
-              <p class="endpoint-placeholder">/api/v1/book</p>
+          <section class='subsection' id='create-book'>
+            <div class='title'>
+              <div>
+                <h4>Create Book</h4>
+                <p class='badge post'>POST</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/book</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Create Book</strong> endpoint is used to add new book to database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block create-book-req-res-block">
+            <div class='req-res-block create-book-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
@@ -415,22 +429,24 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for create book endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge post">POST</p>
+            <p class='description'>Example URL for <strong>Create Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge post'>POST</p>
               <p>https://simple-library-api.herokuapp.app.com/api/v1/book</p>
             </div>
           </section>
-          <section class="subsection" id='update-book'>
-            <div class="title">
-              <h4>Update Book</h4>
-              <p class="badge patch">PATCH</p>
-              <p class="endpoint-placeholder">/api/v1/book/:id</p>
+          <section class='subsection' id='update-book'>
+            <div class='title'>
+              <div>
+                <h4>Update Book</h4>
+                <p class='badge patch'>PATCH</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/book/:id</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Update Book</strong> endpoint is used to update book by it's ID to database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block update-book-req-res-block">
+            <div class='req-res-block update-book-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
@@ -443,22 +459,24 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for update book endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge patch">PATCH</p>
+            <p class='description'>Example URL for <strong>Update Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge patch'>PATCH</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/book/62736c9557bb65b228628482</p>
             </div>
           </section>
           <section class='subsection' id='delete-book'>
             <div class='title'>
-              <h4>Delete Book</h4>
-              <p class="badge delete">DELETE</p>
-              <p class="endpoint-placeholder">/api/v1/book/:id</p>
+              <div>
+                <h4>Delete Book</h4>
+                <p class='badge delete'>DELETE</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/book/:id</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Delete Book</strong> endpoint is used to delete book by it's ID from database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block delete-book-req-res-block">
+            <div class='req-res-block delete-book-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Header</p>
                 <p>Response</p>
@@ -480,22 +498,24 @@
                 </table>
               </div>
             </div>
-            <p class="description">Example URL for delete book endpoint:</p>
-            <div class="code-placeholder">
+            <p class='description'>Example URL for <strong>Delete Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
               <p class='badge delete'>DELETE</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/book/62736c9557bb65b228628482</p>
             </div>
           </section>
-          <section class="subsection" id='borrow-book'>
-            <div class="title">
-              <h4>Borrow Book</h4>
-              <p class="badge post">POST</p>
-              <p class="endpoint-placeholder">/api/v1/books_borrowed/borrow</p>
+          <section class='subsection' id='borrow-book'>
+            <div class='title'>
+              <div>
+                <h4>Borrow Book</h4>
+                <p class='badge post'>POST</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/books_borrowed/borrow</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Borrow Book</strong> endpoint allowed student to borrow book from application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block borrow-book-req-res-block">
+            <div class='req-res-block borrow-book-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
@@ -507,22 +527,24 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for borrow book endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge post">POST</p>
+            <p class='description'>Example URL for <strong>Borrow Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge post'>POST</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/borrow</p>
             </div>
           </section>
-          <section class="subsection" id='return-borrowed-book'>
-            <div class="title">
-              <h4>Return Borrowed Book</h4>
-              <p class="badge post">POST</p>
-              <p class="endpoint-placeholder">/api/v1/books_borrowed/return</p>
+          <section class='subsection' id='return-borrowed-book'>
+            <div class='title'>
+              <div>
+                <h4>Return Borrowed Book</h4>
+                <p class='badge post'>POST</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/books_borrowed/return</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Return Borrowed Book</strong> endpoint allowed student to return the borrowed book to the library by providing the <strong>borrowed_id</strong> that retrieve when borrowing book. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block return-borrowed-book-req-res-block">
+            <div class='req-res-block return-borrowed-book-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
@@ -534,22 +556,24 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for return borrowed book endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge post">POST</p>
+            <p class='description'>Example URL for <strong>Return Borrowed Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge post'>POST</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/return</p>
             </div>
           </section>
-          <section class="subsection" id='get-borrowed-book'>
-            <div class="title">
-              <h4>Get Borrowed Book</h4>
-              <p class="badge get">GET</p>
-              <p class="endpoint-placeholder">/api/v1/books_borrowed/borrow</p>
+          <section class='subsection' id='get-borrowed-book'>
+            <div class='title'>
+              <div>
+                <h4>Get Borrowed Book</h4>
+                <p class='badge get'>GET</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/books_borrowed/borrow</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Get Borrowed Book</strong> endpoint is used to retrieve all books borrowed by the current login student. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block get-borrowed-book-req-res-block">
+            <div class='req-res-block get-borrowed-book-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Header</p>
                 <p>Response</p>
@@ -570,25 +594,27 @@
                   </tbody>
                 </table>
               </div>
-              <p class="description">Example URL for get borrowed book endpoint:</p>
-              <div class="code-placeholder">
-                <p class="badge get">GET</p>
+              <p class='description'>Example URL for <strong>Get Borrowed Book</strong> endpoint:</p>
+              <div class='code-placeholder'>
+                <p class='badge get'>GET</p>
                 <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/borrow</p>
               </div>
             </div>
           </section>
-          <section class="subsection" id='get-returned-book'>
-            <div class="title">
-              <h4>Get Returned Book</h4>
-              <p class="badge get">GET</p>
-              <p class="endpoint-placeholder">/api/v1/books_borrowed/return</p>
+          <section class='subsection' id='get-returned-book'>
+            <div class='title'>
+              <div>
+                <h4>Get Returned Book</h4>
+                <p class='badge get'>GET</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/books_borrowed/return</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Get Returned Book</strong> endpoint is used to retrieve all returned books by the current login student. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block get-returned-book-req-res-block">
+            <div class='req-res-block get-returned-book-req-res-block'>
               <div>
-                <p class="req-res-link-active">Header</p>
+                <p class='req-res-link-active'>Header</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -608,28 +634,30 @@
                 </table>
               </div>
             </div>
-            <p class="description">Example URL for get returned book endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge get">GET</p>
+            <p class='description'>Example URL for <strong>Get Returned Book</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge get'>GET</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/return</p>
             </div>
           </section>
         </section>
         <section id='user'>
           <h3>User Endpoint</h3>
-          <p class="description">
+          <p class='description'>
             <strong>Library API</strong> support several user-related functionality, such as edit profile, and change password endpoint. Below is the endpoint detail for each feature.
           </p>
-          <section class="subsection" id='edit-profile'>
-            <div class="title">
-              <h4>Edit Profile</h4>
-              <p class="badge patch">PATCH</p>
-              <p class="endpoint-placeholder">/api/v1/user/edit_profile</p>
+          <section class='subsection' id='edit-profile'>
+            <div class='title'>
+              <div>
+                <h4>Edit Profile</h4>
+                <p class='badge patch'>PATCH</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/user/edit_profile</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Edit Profile</strong> endpoint allowed user to change their personal information, such as <strong>name</strong>, and <strong>avatar</strong> inside the application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block edit-profile-req-res-block">
+            <div class='req-res-block edit-profile-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
@@ -642,22 +670,24 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for edit profile endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge patch">PATCH</p>
+            <p class='description'>Example URL for <strong>Edit Profile</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge patch'>PATCH</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/user/edit_profile</p>
             </div>
           </section>
-          <section class="subsection" id='change-password'>
-            <div class="title">
-              <h4>Change Password</h4>
-              <p class="badge patch">PATCH</p>
-              <p class="endpoint-placeholder">/api/v1/user/change_password</p>
+          <section class='subsection' id='change-password'>
+            <div class='title'>
+              <div>
+                <h4>Change Password</h4>
+                <p class='badge patch'>PATCH</p>
+              </div>
+              <p class='endpoint-placeholder'>/api/v1/user/change_password</p>
             </div>
-            <p class="description">
+            <p class='description'>
               <strong>Change Password</strong> endpoint allowed user to change their password inside the application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block change-password-req-res-block">
+            <div class='req-res-block change-password-req-res-block'>
               <div>
                 <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
@@ -670,9 +700,9 @@
                 <p>}</p>
               </div>
             </div>
-            <p class="description">Example URL for change password endpoint:</p>
-            <div class="code-placeholder">
-              <p class="badge patch">PATCH</p>
+            <p class='description'>Example URL for <strong>Change Password</strong> endpoint:</p>
+            <div class='code-placeholder'>
+              <p class='badge patch'>PATCH</p>
               <p>https://simple-library-api.herokuapp.com/api/v1/user/change_password</p>
             </div>
           </section>
@@ -681,8 +711,27 @@
     </main>
   </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous'></script>
 <script>
+  function headerHTMLValue(isAdmin) {
+    return `
+      <table border='1'>
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Value Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Authorization</td>
+            <td>Access token that retrieved from login response. ${isAdmin ? '(Should login with with admin role user)' : ''}</td>
+          </tr>
+        </tbody>
+      </table>
+    `
+  }
+
   $(document).ready(() => {
     $('.register-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
       $('.register-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
@@ -749,22 +798,7 @@
       $('.logout-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.logout-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
       $('.logout-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.logout-req-res-block div:nth-child(2)').html(`
-        <table border='1'>
-          <thead>
-            <tr>
-              <th>Key</th>
-              <th>Value Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Authorization</td>
-              <td>Access token that retrieved from login response.</td>
-            </tr>
-          </tbody>
-        </table>
-      `)
+      $('.logout-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.logout-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
@@ -984,24 +1018,7 @@
       $('.create-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.create-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
       $('.create-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.create-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.create-book-req-res-block div:nth-child(2)').html(headerHTMLValue(true))
     })
 
     $('.create-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
@@ -1062,24 +1079,7 @@
       $('.update-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.update-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
       $('.update-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.update-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.update-book-req-res-block div:nth-child(2)').html(headerHTMLValue(true))
     })
 
     $('.update-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
@@ -1121,24 +1121,7 @@
       $('.delete-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.delete-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
       $('.delete-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.delete-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.delete-book-req-res-block div:nth-child(2)').html(headerHTMLValue(true))
     })
 
     $('.delete-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
@@ -1171,24 +1154,7 @@
       $('.borrow-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
       $('.borrow-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.borrow-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response.</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.borrow-book-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
@@ -1233,24 +1199,7 @@
       $('.return-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
       $('.return-borrowed-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.return-borrowed-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response.</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
@@ -1270,24 +1219,7 @@
       $('.get-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.get-borrowed-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
       $('.get-borrowed-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.get-borrowed-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response.</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.get-borrowed-book-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.get-borrowed-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
@@ -1357,24 +1289,7 @@
       $('.get-returned-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.get-returned-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
       $('.get-returned-book-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.get-returned-book-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response.</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.get-returned-book-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.get-returned-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
@@ -1458,24 +1373,7 @@
       $('.edit-profile-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
       $('.edit-profile-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.edit-profile-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response.</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.edit-profile-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
@@ -1524,24 +1422,7 @@
       $('.change-password-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
       $('.change-password-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
       $('.change-password-req-res-block div:nth-child(2)').addClass('table-container')
-      $('.change-password-req-res-block div:nth-child(2)').html(
-        `
-          <table border='1'>
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Authorization</td>
-                <td>Access token that retrieved from login response.</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      )
+      $('.change-password-req-res-block div:nth-child(2)').html(headerHTMLValue(false))
     })
 
     $('.change-password-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
@@ -1555,134 +1436,6 @@
           <p>}</p>
         `
       )
-    })
-
-    $('main div:nth-child(2)').scroll(() => {
-      const overviewPos = $('#overview').position()
-      if (overviewPos.top <= 92 && overviewPos.top >= -208) {
-        $('#overview-link').addClass('sidebar-link-active')
-      } else {
-        $('#overview-link').removeClass('sidebar-link-active')
-      }
-
-      const authenticationPos = $('#authentication').position()
-      if (authenticationPos.top <= 79 && authenticationPos.top >= -39) {
-        $('#authentication-link').addClass('sidebar-link-active')
-      } else {
-        $('#authentication-link').removeClass('sidebar-link-active')
-      }
-
-      const registerPos = $('#register').position()
-      if (registerPos.top <= 54 && registerPos.top >= -410) {
-        $('#register-link').addClass('sidebar-link-active')
-      } else {
-        $('#register-link').removeClass('sidebar-link-active')
-      }
-
-      const loginPos = $('#login').position()
-      if (loginPos.top <= 54 && loginPos.top >= -254) {
-        $('#login-link').addClass('sidebar-link-active')
-      } else {
-        $('#login-link').removeClass('sidebar-link-active')
-      }
-
-      const logoutPos = $('#logout').position()
-      if (logoutPos.top <= 54 && logoutPos.top >= -244) {
-        $('#logout-link').addClass('sidebar-link-active')
-      } else {
-        $('#logout-link').removeClass('sidebar-link-active')
-      }
-
-      const bookPos = $('#book').position()
-      if (bookPos.top <= 91 && bookPos.top >= -57) {
-        $('#book-link').addClass('sidebar-link-active')
-      } else {
-        $('#book-link').removeClass('sidebar-link-active')
-      }
-
-      const getBooksPos = $('#get-books').position()
-      if (getBooksPos.top <= 62 && getBooksPos.top >= -410) {
-        $('#get-books-link').addClass('sidebar-link-active')
-      } else {
-        $('#get-books-link').removeClass('sidebar-link-active')
-      }
-
-      const getBookByIdPos = $('#get-book-by-id').position()
-      if (getBookByIdPos.top <= 62 && getBookByIdPos.top >= -791) {
-        $('#get-book-by-id-link').addClass('sidebar-link-active')
-      } else {
-        $('#get-book-by-id-link').removeClass('sidebar-link-active')
-      }
-
-      const searchBookPos = $('#search-book').position()
-      if (searchBookPos.top <= 62 && searchBookPos.top >= -277) {
-        $('#search-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#search-book-link').removeClass('sidebar-link-active')
-      }
-
-      const createBookPos = $('#create-book').position()
-      if (createBookPos.top <= 62 && createBookPos.top >= -541) {
-        $('#create-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#create-book-link').removeClass('sidebar-link-active')
-      }
-
-      const updateBookPos = $('#update-book').position()
-      if (updateBookPos.top <= 62 && updateBookPos.top >= -309) {
-        $('#update-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#update-book-link').removeClass('sidebar-link-active')
-      }
-
-      const deleteBookPos = $('#delete-book').position()
-      if (deleteBookPos.top <= 62 && deleteBookPos.top >= -323) {
-        $('#delete-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#delete-book-link').removeClass('sidebar-link-active')
-      }
-
-      const borrowBookPos = $('#borrow-book').position()
-      if (borrowBookPos.top <= 62 && borrowBookPos.top >= -267) {
-        $('#borrow-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#borrow-book-link').removeClass('sidebar-link-active')
-      }
-
-      const returnBorrowedBookPos = $('#return-borrowed-book').position()
-      if (returnBorrowedBookPos.top <= 62 && returnBorrowedBookPos.top >= -286) {
-        $('#return-borrowed-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#return-borrowed-book-link').removeClass('sidebar-link-active')
-      }
-
-      const getBorrowedBookPos = $('#get-borrowed-book').position()
-      if (getBorrowedBookPos.top <= 62 && getBorrowedBookPos.top >= -271) {
-        $('#get-borrowed-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#get-borrowed-book-link').removeClass('sidebar-link-active')
-      }
-
-      const getReturnedBookPos = $('#get-returned-book').position()
-      if (getReturnedBookPos.top <= 62 && getReturnedBookPos.top >= -276) {
-        $('#get-returned-book-link').addClass('sidebar-link-active')
-      } else {
-        $('#get-returned-book-link').removeClass('sidebar-link-active')
-      }
-
-      const userPos = $('#user').position()
-      if (userPos.top <= 81 && userPos.top >= -31) {
-        $('#user-link').addClass('sidebar-link-active')
-      } else {
-        $('#user-link').removeClass('sidebar-link-active')
-      }
-
-      const editProfilePos = $('#edit-profile').position()
-      if (editProfilePos.top <= 81 && editProfilePos.top >= -100) {
-        $('#edit-profile-link').addClass('sidebar-link-active')
-      } else {
-        $('#edit-profile-link').removeClass('sidebar-link-active')
-      }
     })
   })
 </script>

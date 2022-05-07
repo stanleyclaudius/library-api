@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="./../img/favicon.ico">
   <link rel="stylesheet" href="./../css/index.css">
   <title>Library API Documentation</title>
@@ -11,49 +12,110 @@
 <body>
   <div class='container'>
     <header>
-      <img src='./../img/logo.png' alt='Library API - Stanley Claudius' width="40">
-      <h1>Library API</h1>
+      <div>
+        <img src='./../img/logo.png' alt='Library API - Stanley Claudius' width="40">
+        <h1>Library API</h1>
+      </div>
+      <a href='https://github.com/stanleyclaudius/library-api' target='_blank'>
+        <i class='fa fa-lg fa-brands fa-github'></i>
+        <p>Github</p>
+      </a>
     </header>
     <main>
       <div>
         <div class='header-link'>
-          <a href="">Overview</a>
+          <a href="#overview" id='overview-link'>
+            <i class="fa fa-info-circle"></i>
+            Overview
+          </a>
         </div>
         <div class='header-link'>
-          <a href="">
+          <a href="#authentication" id='authentication-link'>
+            <i class='fa fa-solid fa-key'></i>
             Authentication Endpoint
           </a>
           <div class='header-sublink'>
-            <a href=''>Register</a>
-            <a href="">Login</a>
-            <a href="">Logout</a>
+            <a href='#register' id="register-link">
+              <i class="fa fa-user-plus"></i>
+              Register
+            </a>
+            <a href="#login" id='login-link'>
+              <i class="fa fa-solid fa-sign-in"></i>
+              Login
+            </a>
+            <a href="#logout" id='logout-link'>
+              <i class="fa fa-sign-out"></i>
+              Logout
+            </a>
           </div>
         </div>
         <div class='header-link'>
-          <a href="">Book Endpoint</a>
+          <a href="#book" id='book-link'>
+            <i class="fa fa-book"></i>
+            Book Endpoint
+          </a>
           <div class='header-sublink'>
-            <a href=''>Get Books</a>
-            <a href="">Get Book By Id</a>
-            <a href="">Search Book</a>
-            <a href=''>Create Book</a>
-            <a href="">Update Book</a>
-            <a href="">Delete Book</a>
-            <a href="">Borrow Book</a>
-            <a href="">Return Borrowed Book</a>
-            <a href="">Get Borrowed Book</a>
-            <a href="">Get Returned Book</a>
+            <a href='#get-books' id='get-books-link'>
+              <i class="fa fa-book"></i>
+              Get Books
+            </a>
+            <a href="#get-book-by-id" id='get-book-by-id-link'>
+              <i class="fa fa-book"></i>
+              Get Book By Id
+            </a>
+            <a href="#search-book" id='search-book-link'>
+              <i class="fa fa-search"></i>
+              Search Book
+            </a>
+            <a href='#create-book' id='create-book-link'>
+              <i class="fa fa-plus-circle"></i>
+              Create Book
+            </a>
+            <a href="#update-book" id='update-book-link'>
+              <i class="fa fa-pencil-square-o"></i>
+              Update Book
+            </a>
+            <a href="#delete-book" id='delete-book-link'>
+              <i class="fa fa-trash"></i>
+              Delete Book
+            </a>
+            <a href="#borrow-book" id='borrow-book-link'>
+              <i class="fa fa-file-text"></i>
+              Borrow Book
+            </a>
+            <a href="#return-borrowed-book" id='return-borrowed-book-link'>
+              <i class="fa fa-clipboard"></i>
+              Return Borrowed Book
+            </a>
+            <a href="#get-borrowed-book" id='get-borrowed-book-link'>
+              <i class="fa fa-book"></i>
+              Get Borrowed Book
+            </a>
+            <a href="#get-returned-book" id='get-returned-book-link'>
+              <i class="fa fa-book"></i>
+              Get Returned Book
+            </a>
           </div>
         </div>
         <div class='header-link'>
-          <a href="">User Endpoint</a>
+          <a href="#user" id='user-link'>
+            <i class="fa fa-user"></i>
+            User Endpoint
+          </a>
           <div class='header-sublink'>
-            <a href="">Edit Profile</a>
-            <a href="">Change Password</a>
+            <a href="#edit-profile" id='edit-profile-link'>
+              <i class="fa fa-pencil"></i>
+              Edit Profile
+            </a>
+            <a href="#change-password" id='change-password-link'>
+              <i class="fa fa-unlock-alt"></i>
+              Change Password
+            </a>
           </div>
         </div>
       </div>
       <div>
-        <section>
+        <section id='overview'>
           <h3>Overview</h3>
           <p class='description'>
             <strong>Library API</strong> is an API that created for a school or college library that wanted to create an application that have borrow and return books functionality for their user. This API also allowed their user to do authentication features, such as login and register, so, the library can just uses the API without implementing basic features again for the application.
@@ -65,22 +127,23 @@
             <p>https://simple-library-api.herokuapp.com</p>
           </div>
         </section>
-        <section>
+        <section id='authentication'>
           <h3>Authentication Endpoint</h3>
           <p class="description">
             <strong>Library API</strong> support several authentication functionality, such as login, register, and logout endpoint. Below is the endpoint detail for each feature.
           </p>
-          <section class='subsection'>
+          <section class='subsection' id='register'>
             <div class='title'>
               <h4>Register</h4>
               <p class='badge post'>POST</p>
+              <p class='endpoint-placeholder'>/api/v1/auth/register</p>
             </div>
             <p class='description'>
               <strong>Register</strong> endpoint is used to register user data, so they can login to the application. Below is the example request and response to call this endpoint. By default, every registered user will have <strong>student</strong> role. The role should be manually changed in the database become <strong>admin</strong> if necessary.
             </p>
-            <div class='req-res-block'>
+            <div class='req-res-block register-req-res-block'>
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Response</p>
               </div>
               <div>
@@ -93,18 +156,26 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">
+              Example URL for register endpoint:
+            </p>
+            <div class="code-placeholder">
+              <p class="badge post">POST</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/auth/register</p>
+            </div>
           </section>
-          <section class='subsection'>
+          <section class='subsection' id='login'>
             <div class='title'>
               <h4>Login</h4>
               <p class="badge post">POST</p>
+              <p class="endpoint-placeholder">/api/v1/auth/login</p>
             </div>
             <p class="description">
               <strong>Login</strong> endpoint is used to sign user in to the application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block login-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Response</p>
               </div>
               <div>
@@ -114,44 +185,67 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for login endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge post">POST</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/auth/login</p>
+            </div>
           </section>
-          <section class='subsection'>
+          <section class='subsection' id='logout'>
             <div class="title">
               <h4>Logout</h4>
               <p class='badge get'>GET</p>
+              <p class="endpoint-placeholder">/api/v1/auth/logout</p>
             </div>
             <p class="description">
               <strong>Logout</strong> endpoint is used to sign user out from the application. Below is the example response for this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block logout-req-res-block">
               <div>
-                <p>Header</p>
+                <p class="req-res-link-active">Header</p>
                 <p>Response</p>
               </div>
-              <div>
-                <p>{</p>
-                <p>"msg": "Logout success."</p>
-                <p>}</p>
+              <div class='table-container'>
+                <table border='1'>
+                  <thead>
+                    <tr>
+                      <th>Key</th>
+                      <th>Value Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Authorization</td>
+                      <td>Access token that retrieved from login response.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
+            <p class="description">Example URL for logout endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge get">GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/auth/logout</p>
             </div>
           </section>
         </section>
-        <section>
+        <section id='book'>
           <h3>Book Endpoint</h3>
           <p class="description">
             <strong>Library API</strong> support several book-related functionality, such as get books, get book by id, search book, create book, update book, and delete book endpoint. Below is the endpoint detail for each feature.
           </p>
-          <section class="subsection">
+          <section class="subsection" id='get-books'>
             <div class="title">
               <h4>Get Books</h4>
               <p class="badge get">GET</p>
+              <p class="endpoint-placeholder">/api/v1/book</p>
             </div>
             <p class="description">
               <strong>Get Books</strong> endpoint is used to retrieve all books from the database. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block get-books-req-res-block">
               <div>
-                <p>Query String</p>
+                <p class='req-res-link-active'>Query String</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -186,19 +280,33 @@
                   </tbody>
                 </table>
               </div>
+              <p class="description">Several example URL for get books endpoint:</p>
+              <div class="code-placeholder">
+                <p class="badge get">GET</p>
+                <p>https://simple-library-api.herokuapp.com/api/v1/book</p>
+              </div>
+              <div class="code-placeholder">
+                <p class="badge get">GET</p>
+                <p>https://simple-library-api.herokuapp.com/api/v1/book?limit=5&page=2&sort=publisher</p>
+              </div>
+              <div class="code-placeholder">
+                <p class="badge get">GET</p>
+                <p>https://simple-library-api.herokuapp.com/api/v1/book?page=2</p>
+              </div>
             </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='get-book-by-id'>
             <div class="title">
               <h4>Get Book By Id</h4>
               <p class="badge get">GET</p>
+              <p class="endpoint-placeholder">/api/v1/book/:id</p>
             </div>
             <p class="description">
               <strong>Get Book By Id</strong> endpoint is used to retrieve specific book by it's id from database. Below is the example request and response to call this endpoint.
             </p>
             <div class="req-res-block">
               <div>
-                <p>Response</p>
+                <p class="req-res-link-active">Response</p>
               </div>
               <div>
                 <p>{</p>
@@ -232,18 +340,24 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for get book by id endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge get">GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book/62737c97e3e97a69be1cc7e5</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='search-book'>
             <div class="title">
               <h4>Search Book</h4>
               <p class="badge get">GET</p>
+              <p class="endpoint-placeholder">/api/v1/book/search</p>
             </div>
             <p class="description">
               <strong>Search Book</strong> endpoint is used to search book by keyword from database. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block search-book-req-res-block">
               <div>
-                <p>Query String</p>
+                <p class="req-res-link-active">Query String</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -265,18 +379,24 @@
                 </table>
               </div>
             </div>
+            <p class="description">Example URL for search book endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge get">GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book/search?keyword=romance</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='create-book'>
             <div class="title">
               <h4>Create Book</h4>
               <p class="badge post">POST</p>
+              <p class="endpoint-placeholder">/api/v1/book</p>
             </div>
             <p class="description">
               <strong>Create Book</strong> endpoint is used to add new book to database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block create-book-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
                 <p>Response</p>
               </div>
@@ -295,18 +415,24 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for create book endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge post">POST</p>
+              <p>https://simple-library-api.herokuapp.app.com/api/v1/book</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='update-book'>
             <div class="title">
               <h4>Update Book</h4>
               <p class="badge patch">PATCH</p>
+              <p class="endpoint-placeholder">/api/v1/book/:id</p>
             </div>
             <p class="description">
               <strong>Update Book</strong> endpoint is used to update book by it's ID to database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block update-book-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
                 <p>Response</p>
               </div>
@@ -317,18 +443,24 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for update book endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge patch">PATCH</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book/62736c9557bb65b228628482</p>
+            </div>
           </section>
-          <section class='subsection'>
+          <section class='subsection' id='delete-book'>
             <div class='title'>
               <h4>Delete Book</h4>
               <p class="badge delete">DELETE</p>
+              <p class="endpoint-placeholder">/api/v1/book/:id</p>
             </div>
             <p class="description">
               <strong>Delete Book</strong> endpoint is used to delete book by it's ID from database. This endpoint can be accessed by user with <strong>admin</strong> role only. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block delete-book-req-res-block">
               <div>
-                <p>Header</p>
+                <p class='req-res-link-active'>Header</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -348,60 +480,78 @@
                 </table>
               </div>
             </div>
+            <p class="description">Example URL for delete book endpoint:</p>
+            <div class="code-placeholder">
+              <p class='badge delete'>DELETE</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/book/62736c9557bb65b228628482</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='borrow-book'>
             <div class="title">
               <h4>Borrow Book</h4>
               <p class="badge post">POST</p>
+              <p class="endpoint-placeholder">/api/v1/books_borrowed/borrow</p>
             </div>
             <p class="description">
               <strong>Borrow Book</strong> endpoint allowed student to borrow book from application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block borrow-book-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
                 <p>Response</p>
               </div>
               <div>
                 <p>{</p>
-                <p>"book_id": "62737c97e3e97a69be1cc7e5"</p>
+                <p>"book_id": "62737caae3e97a69be1cc7e8"</p>
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for borrow book endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge post">POST</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/borrow</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='return-borrowed-book'>
             <div class="title">
               <h4>Return Borrowed Book</h4>
               <p class="badge post">POST</p>
+              <p class="endpoint-placeholder">/api/v1/books_borrowed/return</p>
             </div>
             <p class="description">
               <strong>Return Borrowed Book</strong> endpoint allowed student to return the borrowed book to the library by providing the <strong>borrowed_id</strong> that retrieve when borrowing book. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block return-borrowed-book-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
                 <p>Response</p>
               </div>
               <div>
                 <p>{</p>
-                <p>"borrowed_id": "6273923492b8b06a3fb95ae9"</p>
+                <p>"borrowed_id": "62760c5f49de913d18e5c399"</p>
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for return borrowed book endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge post">POST</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/return</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='get-borrowed-book'>
             <div class="title">
               <h4>Get Borrowed Book</h4>
               <p class="badge get">GET</p>
+              <p class="endpoint-placeholder">/api/v1/books_borrowed/borrow</p>
             </div>
             <p class="description">
               <strong>Get Borrowed Book</strong> endpoint is used to retrieve all books borrowed by the current login student. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block get-borrowed-book-req-res-block">
               <div>
-                <p>Header</p>
+                <p class='req-res-link-active'>Header</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -420,19 +570,25 @@
                   </tbody>
                 </table>
               </div>
+              <p class="description">Example URL for get borrowed book endpoint:</p>
+              <div class="code-placeholder">
+                <p class="badge get">GET</p>
+                <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/borrow</p>
+              </div>
             </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='get-returned-book'>
             <div class="title">
               <h4>Get Returned Book</h4>
               <p class="badge get">GET</p>
+              <p class="endpoint-placeholder">/api/v1/books_borrowed/return</p>
             </div>
             <p class="description">
               <strong>Get Returned Book</strong> endpoint is used to retrieve all returned books by the current login student. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block get-returned-book-req-res-block">
               <div>
-                <p>Header</p>
+                <p class="req-res-link-active">Header</p>
                 <p>Response</p>
               </div>
               <div class='table-container'>
@@ -452,24 +608,30 @@
                 </table>
               </div>
             </div>
+            <p class="description">Example URL for get returned book endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge get">GET</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/books_borrowed/return</p>
+            </div>
           </section>
         </section>
-        <section>
+        <section id='user'>
           <h3>User Endpoint</h3>
           <p class="description">
             <strong>Library API</strong> support several user-related functionality, such as edit profile, and change password endpoint. Below is the endpoint detail for each feature.
           </p>
-          <section class="subsection">
+          <section class="subsection" id='edit-profile'>
             <div class="title">
               <h4>Edit Profile</h4>
               <p class="badge patch">PATCH</p>
+              <p class="endpoint-placeholder">/api/v1/user/edit_profile</p>
             </div>
             <p class="description">
               <strong>Edit Profile</strong> endpoint allowed user to change their personal information, such as <strong>name</strong>, and <strong>avatar</strong> inside the application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block edit-profile-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
                 <p>Response</p>
               </div>
@@ -480,18 +642,24 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for edit profile endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge patch">PATCH</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/user/edit_profile</p>
+            </div>
           </section>
-          <section class="subsection">
+          <section class="subsection" id='change-password'>
             <div class="title">
               <h4>Change Password</h4>
               <p class="badge patch">PATCH</p>
+              <p class="endpoint-placeholder">/api/v1/user/change_password</p>
             </div>
             <p class="description">
               <strong>Change Password</strong> endpoint allowed user to change their password inside the application. Below is the example request and response to call this endpoint.
             </p>
-            <div class="req-res-block">
+            <div class="req-res-block change-password-req-res-block">
               <div>
-                <p>Body</p>
+                <p class='req-res-link-active'>Body</p>
                 <p>Header</p>
                 <p>Response</p>
               </div>
@@ -502,10 +670,1021 @@
                 <p>}</p>
               </div>
             </div>
+            <p class="description">Example URL for change password endpoint:</p>
+            <div class="code-placeholder">
+              <p class="badge patch">PATCH</p>
+              <p>https://simple-library-api.herokuapp.com/api/v1/user/change_password</p>
+            </div>
           </section>
         </section>
       </div>
     </main>
   </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(() => {
+    $('.register-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.register-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.register-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.register-req-res-block div:nth-child(2)').html(`
+        <p>{</p>
+        <p>"name": "User 1",</p>
+        <p>"gender": "male",</p>
+        <p>"email": "user1@gmail.com",</p>
+        <p>"password": "user1@1234",</p>
+        <p>"dob": "2001-09-19",</p>
+        <p>}</p>
+      `)
+    })
+
+    $('.register-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.register-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.register-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.register-req-res-block div:nth-child(2)').html(`
+        <p>{</p>
+        <p>"msg": "User has been successfully registered."</p>
+        <p>}</p>
+      `)
+    })
+
+    $('.login-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.login-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.login-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.login-req-res-block div:nth-child(2)').html(`
+        <p>{</p>
+        <p>"email": "user1@gmail.com",</p>
+        <p>"password": "user1@1234"</p>
+        <p>}</p>
+      `)
+    })
+
+    $('.login-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.login-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.login-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.login-req-res-block div:nth-child(2)').html(`
+        <p>{</p>
+        <p>"msg": "Authenticated as User 1.",</p>
+        <p>"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNzM2Yzk1NTdiYjY1YjIyODYyODQ4MiIsImlhdCI6MTY1MTg0OTY4NSwiZXhwIjoxNjUyNDU0NDg1fQ.nS7AAvYjxsbg4XYOjQMYPmCjiu7YIe7W1V5hvFJMmAg",</p>
+        <p>"user": {</p>
+        <div class='increase-indent'>
+          <p>"_id": "62736c9557bb65b228628482",</p>
+          <p>"name": "Admin",</p>
+          <p>"dob": "1999-05-23T00:00:00.000Z",</p>
+          <p>"avatar": "https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png",</p>
+          <p>"gender": "male",</p>
+          <p>"email": "admin@gmail.com",</p>
+          <p>"password": "",</p>
+          <p>"role": "admin",</p>
+          <p>"createdAt": "2022-05-05T06:20:05.054Z",</p>
+          <p>"updatedAt": "2022-05-05T06:20:05.054Z",</p>
+          <p>"__v": 0</p>
+        </div>
+        <p>}</p>
+        <p>}</p>
+      `)
+    })
+
+    $('.logout-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.logout-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.logout-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.logout-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.logout-req-res-block div:nth-child(2)').html(`
+        <table border='1'>
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Value Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Authorization</td>
+              <td>Access token that retrieved from login response.</td>
+            </tr>
+          </tbody>
+        </table>
+      `)
+    })
+
+    $('.logout-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.logout-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.logout-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.logout-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.logout-req-res-block div:nth-child(2)').html(`
+        <p>{</p>
+        <p>"msg": "Logout success."</p>
+        <p>}</p>
+      `)
+    })
+
+    $('.get-books-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.get-books-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.get-books-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.get-books-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.get-books-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Query String</th>
+                <th>Required</th>
+                <th>Default Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>limit</td>
+                <td>False</td>
+                <td>2</td>
+                <td>Set query limit from database</td>
+              </tr>
+              <tr>
+                <td>page</td>
+                <td>False</td>
+                <td>1</td>
+                <td>Set page for pagination purpose</td>
+              </tr>
+              <tr>
+                <td>sort</td>
+                <td>False</td>
+                <td>-createdAt</td>
+                <td>Sort query by book attribute (Put - sign for descending)</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.get-books-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.get-books-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.get-books-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.get-books-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.get-books-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"books": [<p>
+          <div class='increase-indent'>
+            <p>{</p>
+            <div class='increase-indent'>
+              <p>"_id": "62737caae3e97a69be1cc7e8",</p>
+              <p>"title": "Book 4",</p>
+              <p>"description": "Description for Book 4",</p>
+              <p>"author": "Author 3",</p>
+              <p>"publisher": "Publisher 3",</p>
+              <p>"date_published": "2022-05-04",</p>
+              <p>"total_page": 400,</p>
+              <p>"isbn": "148182-782191-110818",</p>
+              <p>"qty": 10,</p>
+              <p>"images": [</p>
+              <div class='increase-indent'>
+                <p>"https://google.com",</p>
+                <p>"https://yahoo.com"</p>
+              </div>
+              <p>],</p>
+              <p>"category": [</p>
+              <div class='increase-indent'>
+                <p>"Geography"</p>
+              </div>
+              <p>],</p>
+              <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+              <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+              <p>"__v": 0</p>
+            </div>
+            <p>},</p>
+            <p>{</p>
+            <div class='increase-indent'>
+              <p>"_id": "62737c97e3e97a69be1cc7e5",</p>
+              <p>"title": "Book 3",</p>
+              <p>"description": "Description for Book 3",</p>
+              <p>"author": "Author 1",</p>
+              <p>"publisher": "Publisher 1",</p>
+              <p>"date_published": "2022-05-04",</p>
+              <p>"total_page": 300,</p>
+              <p>"isbn": "148182-782191-110818",</p>
+              <p>"qty": 10,</p>
+              <p>"images": [</p>
+              <div class='increase-indent'>
+                <p>"https://google.com",</p>
+                <p>"https://yahoo.com"</p>
+              </div>
+              <p>],</p>
+              <p>"category": [</p>
+              <div class='increase-indent'>
+                <p>"Romance"</p>
+              </div>
+              <p>],</p>
+              <p>"createdAt": "2022-05-05T07:28:23.316Z",</p>
+              <p>"createdAt": "2022-05-05T08:48:25.832Z",</p>
+              <p>"__v": 0</p>
+            </div>
+            <p>}</p>
+          </div>
+          <p>],</p>
+          <p>"total": 4</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.search-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.search-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.search-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.search-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.search-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Query String</th>
+                <th>Required</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>keyword</td>
+                <td>True</td>
+                <td>Search book keyword</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.search-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.search-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.search-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.search-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.search-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"books": [<p>
+          <div class='increase-indent'>
+            <p>{</p>
+            <div class='increase-indent'>
+              <p>"_id": "62737caae3e97a69be1cc7e8",</p>
+              <p>"title": "Book 4",</p>
+              <p>"description": "Description for Book 4",</p>
+              <p>"author": "Author 3",</p>
+              <p>"publisher": "Publisher 3",</p>
+              <p>"date_published": "2022-05-04",</p>
+              <p>"total_page": 400,</p>
+              <p>"isbn": "148182-782191-110818",</p>
+              <p>"qty": 10,</p>
+              <p>"images": [</p>
+              <div class='increase-indent'>
+                <p>"https://google.com",</p>
+                <p>"https://yahoo.com"</p>
+              </div>
+              <p>],</p>
+              <p>"category": [</p>
+              <div class='increase-indent'>
+                <p>"Romance"</p>
+              </div>
+              <p>],</p>
+              <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+              <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+              <p>"__v": 0</p>
+            </div>
+            <p>}</p>
+          </div>
+          <p>]</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.create-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.create-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.create-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.create-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.create-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"title": "Book 4",</p>
+          <p>"description": "Description for Book 4",</p>
+          <p>"author": "Author 3",</p>
+          <p>"publisher": "Publisher 3",</p>
+          <p>"date_published": "2022-05-04",</p>
+          <p>"total_page": 400,</p>
+          <p>"isbn": "148182-782191-110818",</p>
+          <p>"qty": 10,</p>
+          <p>"category": ["Geography"],</p>
+          <p>"images": ["https://google.com", "https://yahoo.com"]</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.create-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.create-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.create-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.create-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.create-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.create-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
+      $('.create-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.create-book-req-res-block div:nth-child(1) p:nth-child(3)').addClass('req-res-link-active')
+      $('.create-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.create-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"msg": "Book with title Book 4 has been created successfully.",</p>
+          <p>"book": {</p>
+          <div class='increase-indent'>
+            <p>"_id": "62737caae3e97a69be1cc7e8",</p>
+            <p>"title": "Book 4",</p>
+            <p>"description": "Description for Book 4",</p>
+            <p>"author": "Author 3",</p>
+            <p>"publisher": "Publisher 3",</p>
+            <p>"date_published": "2022-05-04",</p>
+            <p>"total_page": 400,</p>
+            <p>"isbn": "148182-782191-110818",</p>
+            <p>"qty": 10,</p>
+            <p>"images": [</p>
+            <div class='increase-indent'>
+              <p>"https://google.com",</p>
+              <p>"https://yahoo.com"</p>
+            </div>
+            <p>],</p>
+            <p>"category": [</p>
+            <div class='increase-indent'>
+              <p>"Geography"</p>
+            </div>
+            <p>],</p>
+            <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+            <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+            <p>"__v": 0</p>
+          </div>
+          <p>}</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.update-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.update-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.update-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.update-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.update-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"title": "Book 12 updated",</p>
+          <p>"author": "Author 4"</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.update-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.update-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.update-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.update-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.update-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.update-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
+      $('.update-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.update-book-req-res-block div:nth-child(1) p:nth-child(3)').addClass('req-res-link-active')
+      $('.update-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.update-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"_id": "62737caae3e97a69be1cc7e8",</p>
+          <p>"title": "Book 12 updated",</p>
+          <p>"description": "Description for Book 4",</p>
+          <p>"author": "Author 4",</p>
+          <p>"publisher": "Publisher 3",</p>
+          <p>"date_published": "2022-05-04",</p>
+          <p>"total_page": 400,</p>
+          <p>"isbn": "148182-782191-110818",</p>
+          <p>"qty": 10,</p>
+          <p>"images": [</p>
+          <div class='increase-indent'>
+            <p>"https://google.com",</p>
+            <p>"https://yahoo.com"</p>
+          </div>
+          <p>],</p>
+          <p>"category": [</p>
+          <div class='increase-indent'>
+            <p>"Geography"</p>
+          </div>
+          <p>],</p>
+          <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+          <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+          <p>"__v": 0</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.delete-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.delete-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.delete-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.delete-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.delete-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response. (Should login with with admin role user)</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.delete-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.delete-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.delete-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.delete-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.delete-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"msg": "Book with ID 62736c9557bb65b228628482 has been deleted successfully."</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.borrow-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.borrow-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.borrow-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"book_id": "62737caae3e97a69be1cc7e8"</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.borrow-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.borrow-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.borrow-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response.</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
+      $('.borrow-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.borrow-book-req-res-block div:nth-child(1) p:nth-child(3)').addClass('req-res-link-active')
+      $('.borrow-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.borrow-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"msg": "Books with ID 62737caae3e97a69be1cc7e8 has been borrowed successfully by User 1",</p>
+          <p>"books_borrowed": {</p>
+          <div class='increase-indent'>
+            <p>"user": "62734565d6453f2bf86428ca",</p>
+            <p>"book": "62737caae3e97a69be1cc7e8",</p>
+            <p>"date_borrowed": "2022-05-07T06:06:23.191Z",</p>
+            <p>"date_returned": null,</p>
+            <p>"_id": "62760c5f49de913d18e5c399",</p>
+            <p>"createdAt": "2022-05-07T06:06:23.203Z",</p>
+            <p>"updatedAt": "2022-05-07T06:06:23.203Z",</p>
+            <p>"__v": 0</p>
+          </div>
+          <p>}</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.return-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"borrowed_id": "62760c5f49de913d18e5c399"</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.return-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response.</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
+      $('.return-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.return-borrowed-book-req-res-block div:nth-child(1) p:nth-child(3)').addClass('req-res-link-active')
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.return-borrowed-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"msg": "Book has been returned successfully."</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.get-borrowed-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.get-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.get-borrowed-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.get-borrowed-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.get-borrowed-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response.</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.get-borrowed-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.get-borrowed-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.get-borrowed-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.get-borrowed-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.get-borrowed-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"borrowedBooks": [</p>
+          <div class='increase-indent'>
+            <p>{</p>
+            <div class='increase-indent'>
+              <p>"_id": "62760c5f49de913d18e5c399",</p>
+              <p>"user": {</p>
+              <div class='increase-indent'>
+                <p>"avatar": "https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png",</p>
+                <p>"_id": "62734565d6453f2bf86428ca",</p>
+                <p>"name": "Aloha",</p>
+                <p>"dob": "2012-05-03T17:00:00.000Z",</p>
+                <p>"gender": "Male",</p>
+                <p>"email": "user1@gmail.com"</p>
+              </div>
+              <p>},</p>
+              <p>"book": {</p>
+              <div class='increase-indent'>
+                <p>"_id": "62737caae3e97a69be1cc7e8",</p>
+                <p>"title": "Book 4",</p>
+                <p>"description": "Description for Book 4",</p>
+                <p>"author": "Author 3",</p>
+                <p>"publisher": "Publisher 3",</p>
+                <p>"date_published": "2022-05-04",</p>
+                <p>"total_page": 400,</p>
+                <p>"isbn": "148182-782191-110818",</p>
+                <p>"qty": 10,</p>
+                <p>"images": [</p>
+                <div class='increase-indent'>
+                  <p>"https://google.com",</p>
+                  <p>"https://yahoo.com"</p>
+                </div>
+                <p>],</p>
+                <p>"category": [</p>
+                <div class='increase-indent'>
+                  <p>"Geography"</p>
+                </div>
+                <p>],</p>
+                <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+                <p>"updatedAt": "2022-05-07T06:16:52.426Z",</p>
+                <p>"__v": 0</p>
+              </div>
+              <p>},</p>
+              <p>"date_borrowed": "2022-05-07T06:06:23.191Z",</p>
+              <p>"date_returned": "2022-05-07T06:16:52.341Z",</p>
+              <p>"createdAt": "2022-05-07T06:06:23.203Z",</p>
+              <p>"updatedAt": "2022-05-07T06:16:52.341Z",</p>
+              <p>"__v": 0</p>
+            </div>
+            <p>}</p>
+          </div>
+          <p>]</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.get-returned-book-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.get-returned-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.get-returned-book-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.get-returned-book-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.get-returned-book-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response.</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.get-returned-book-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.get-returned-book-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.get-returned-book-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.get-returned-book-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.get-returned-book-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"returnedBooks": [</p>
+          <div class='increase-indent'>
+            <p>{</p>
+            <div class='increase-indent'>
+              <p>"_id": "62760c5f49de913d18e5c399",</p>
+              <p>"user": {</p>
+              <div class='increase-indent'>
+                <p>"avatar": "https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png",</p>
+                <p>"_id": "62734565d6453f2bf86428ca",</p>
+                <p>"name": "Aloha",</p>
+                <p>"dob": "2012-05-03T17:00:00.000Z",</p>
+                <p>"gender": "Male",</p>
+                <p>"email": "user1@gmail.com"</p>
+              </div>
+              <p>},</p>
+              <p>"book": {</p>
+              <div class='increase-indent'>
+                <p>"_id": "62737caae3e97a69be1cc7e8",</p>
+                <p>"title": "Book 4",</p>
+                <p>"description": "Description for Book 4",</p>
+                <p>"author": "Author 3",</p>
+                <p>"publisher": "Publisher 3",</p>
+                <p>"date_published": "2022-05-04",</p>
+                <p>"total_page": 400,</p>
+                <p>"isbn": "148182-782191-110818",</p>
+                <p>"qty": 10,</p>
+                <p>"images": [</p>
+                <div class='increase-indent'>
+                  <p>"https://google.com",</p>
+                  <p>"https://yahoo.com"</p>
+                </div>
+                <p>],</p>
+                <p>"category": [</p>
+                <div class='increase-indent'>
+                  <p>"Geography"</p>
+                </div>
+                <p>],</p>
+                <p>"createdAt": "2022-05-05T07:28:42.514Z",</p>
+                <p>"updatedAt": "2022-05-07T06:16:52.426Z",</p>
+                <p>"__v": 0</p>
+              </div>
+              <p>},</p>
+              <p>"date_borrowed": "2022-05-07T06:06:23.191Z",</p>
+              <p>"date_returned": "2022-05-07T06:16:52.341Z",</p>
+              <p>"createdAt": "2022-05-07T06:06:23.203Z",</p>
+              <p>"updatedAt": "2022-05-07T06:16:52.341Z",</p>
+              <p>"__v": 0</p>
+            </div>
+            <p>}</p>
+          </div>
+          <p>]</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.edit-profile-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.edit-profile-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.edit-profile-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"name": "Updated Name"</p>
+          <p>"avatar": "https://res.cloudinary.com/avatar/updated-avatar.png"</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.edit-profile-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.edit-profile-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.edit-profile-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response.</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
+      $('.edit-profile-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.edit-profile-req-res-block div:nth-child(1) p:nth-child(3)').addClass('req-res-link-active')
+      $('.edit-profile-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.edit-profile-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"msg": "Profile has been updated successfully.",</p>
+          <p>"user": {</p>
+          <div class='increase-indent'>
+            <p>"_id": "62736c9557bb65b228628482",</p>
+            <p>"name": "Updated Name",</p>
+            <p>"dob": "1999-05-23T00:00:00.000Z",</p>
+            <p>"avatar": "https://res.cloudinary.com/avatar/updated-avatar.png",</p>
+            <p>"gender": "male",</p>
+            <p>"email": "admin@gmail.com",</p>
+            <p>"password": "",</p>
+            <p>"role": "admin",</p>
+            <p>"createdAt": "2022-05-05T06:20:05.054Z",</p>
+            <p>"updatedAt": "2022-05-05T06:20:05.054Z",</p>
+            <p>"__v": 0</p>
+          </div>
+          <p>}</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.change-password-req-res-block div:nth-child(1) p:nth-child(1)').click(() => {
+      $('.change-password-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.change-password-req-res-block div:nth-child(1) p:nth-child(1)').addClass('req-res-link-active')
+      $('.change-password-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.change-password-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"currPassword": "current_password"</p>
+          <p>"newPassword": "new_password"</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('.change-password-req-res-block div:nth-child(1) p:nth-child(2)').click(() => {
+      $('.change-password-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.change-password-req-res-block div:nth-child(1) p:nth-child(2)').addClass('req-res-link-active')
+      $('.change-password-req-res-block div:nth-child(2)').addClass('table-container')
+      $('.change-password-req-res-block div:nth-child(2)').html(
+        `
+          <table border='1'>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Authorization</td>
+                <td>Access token that retrieved from login response.</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      )
+    })
+
+    $('.change-password-req-res-block div:nth-child(1) p:nth-child(3)').click(() => {
+      $('.change-password-req-res-block div:nth-child(1) p').removeClass('req-res-link-active')
+      $('.change-password-req-res-block div:nth-child(1) p:nth-child(3)').addClass('req-res-link-active')
+      $('.change-password-req-res-block div:nth-child(2)').removeClass('table-container')
+      $('.change-password-req-res-block div:nth-child(2)').html(
+        `
+          <p>{</p>
+          <p>"msg": "Password has been changed successfully."</p>
+          <p>}</p>
+        `
+      )
+    })
+
+    $('main div:nth-child(2)').scroll(() => {
+      const overviewPos = $('#overview').position()
+      if (overviewPos.top <= 92 && overviewPos.top >= -208) {
+        $('#overview-link').addClass('sidebar-link-active')
+      } else {
+        $('#overview-link').removeClass('sidebar-link-active')
+      }
+
+      const authenticationPos = $('#authentication').position()
+      if (authenticationPos.top <= 79 && authenticationPos.top >= -39) {
+        $('#authentication-link').addClass('sidebar-link-active')
+      } else {
+        $('#authentication-link').removeClass('sidebar-link-active')
+      }
+
+      const registerPos = $('#register').position()
+      if (registerPos.top <= 54 && registerPos.top >= -410) {
+        $('#register-link').addClass('sidebar-link-active')
+      } else {
+        $('#register-link').removeClass('sidebar-link-active')
+      }
+
+      const loginPos = $('#login').position()
+      if (loginPos.top <= 54 && loginPos.top >= -254) {
+        $('#login-link').addClass('sidebar-link-active')
+      } else {
+        $('#login-link').removeClass('sidebar-link-active')
+      }
+
+      const logoutPos = $('#logout').position()
+      if (logoutPos.top <= 54 && logoutPos.top >= -244) {
+        $('#logout-link').addClass('sidebar-link-active')
+      } else {
+        $('#logout-link').removeClass('sidebar-link-active')
+      }
+
+      const bookPos = $('#book').position()
+      if (bookPos.top <= 91 && bookPos.top >= -57) {
+        $('#book-link').addClass('sidebar-link-active')
+      } else {
+        $('#book-link').removeClass('sidebar-link-active')
+      }
+
+      const getBooksPos = $('#get-books').position()
+      if (getBooksPos.top <= 62 && getBooksPos.top >= -410) {
+        $('#get-books-link').addClass('sidebar-link-active')
+      } else {
+        $('#get-books-link').removeClass('sidebar-link-active')
+      }
+
+      const getBookByIdPos = $('#get-book-by-id').position()
+      if (getBookByIdPos.top <= 62 && getBookByIdPos.top >= -791) {
+        $('#get-book-by-id-link').addClass('sidebar-link-active')
+      } else {
+        $('#get-book-by-id-link').removeClass('sidebar-link-active')
+      }
+
+      const searchBookPos = $('#search-book').position()
+      if (searchBookPos.top <= 62 && searchBookPos.top >= -277) {
+        $('#search-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#search-book-link').removeClass('sidebar-link-active')
+      }
+
+      const createBookPos = $('#create-book').position()
+      if (createBookPos.top <= 62 && createBookPos.top >= -541) {
+        $('#create-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#create-book-link').removeClass('sidebar-link-active')
+      }
+
+      const updateBookPos = $('#update-book').position()
+      if (updateBookPos.top <= 62 && updateBookPos.top >= -309) {
+        $('#update-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#update-book-link').removeClass('sidebar-link-active')
+      }
+
+      const deleteBookPos = $('#delete-book').position()
+      if (deleteBookPos.top <= 62 && deleteBookPos.top >= -323) {
+        $('#delete-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#delete-book-link').removeClass('sidebar-link-active')
+      }
+
+      const borrowBookPos = $('#borrow-book').position()
+      if (borrowBookPos.top <= 62 && borrowBookPos.top >= -267) {
+        $('#borrow-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#borrow-book-link').removeClass('sidebar-link-active')
+      }
+
+      const returnBorrowedBookPos = $('#return-borrowed-book').position()
+      if (returnBorrowedBookPos.top <= 62 && returnBorrowedBookPos.top >= -286) {
+        $('#return-borrowed-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#return-borrowed-book-link').removeClass('sidebar-link-active')
+      }
+
+      const getBorrowedBookPos = $('#get-borrowed-book').position()
+      if (getBorrowedBookPos.top <= 62 && getBorrowedBookPos.top >= -271) {
+        $('#get-borrowed-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#get-borrowed-book-link').removeClass('sidebar-link-active')
+      }
+
+      const getReturnedBookPos = $('#get-returned-book').position()
+      if (getReturnedBookPos.top <= 62 && getReturnedBookPos.top >= -276) {
+        $('#get-returned-book-link').addClass('sidebar-link-active')
+      } else {
+        $('#get-returned-book-link').removeClass('sidebar-link-active')
+      }
+
+      const userPos = $('#user').position()
+      if (userPos.top <= 81 && userPos.top >= -31) {
+        $('#user-link').addClass('sidebar-link-active')
+      } else {
+        $('#user-link').removeClass('sidebar-link-active')
+      }
+
+      const editProfilePos = $('#edit-profile').position()
+      if (editProfilePos.top <= 81 && editProfilePos.top >= -100) {
+        $('#edit-profile-link').addClass('sidebar-link-active')
+      } else {
+        $('#edit-profile-link').removeClass('sidebar-link-active')
+      }
+    })
+  })
+</script>
 </body>
 </html>

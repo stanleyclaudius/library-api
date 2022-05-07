@@ -20,7 +20,7 @@ const booksBorrowedCtrl = {
 
       const newBorrowed = new BooksBorrowed({
         user: req.user?._id,
-        book,
+        book: book_id,
         date_borrowed: new Date()
       })
       await newBorrowed.save()

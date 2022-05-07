@@ -17,7 +17,7 @@
   <p align="center">
     An API for library application that allowed user to borrow and return books
     <br />
-    <a href="https://github.com/stanleyclaudius/library-api.git"><strong>Explore the docs »</strong></a>
+    <a href="https://simple-library-api.herokuapp.com"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://simple-library-api.herokuapp.com">View Demo</a>

@@ -64,8 +64,7 @@ Main technology used to built this application are listed below:
 * [Typescript](https://www.typescriptlang.org/)
 * [MongoDB](https://mongodb.com/cloud/atlas/)
 * [Node.js](https://nodejs.org/)
-* [Heroku](https://herokuapp.com/)
-* [Docker](https://docker.com/)
+* [Express.js](http://expressjs.com/)
 
 <p align="right"><a href="#top">back to top</a></p>
 

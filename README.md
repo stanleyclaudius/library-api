@@ -130,7 +130,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 LinkedIn: [Stanley Claudius](https://www.linkedin.com/in/stanley-claudius-4560b21b7)
 
-Project Link: [https://github.com/stanleyclaudius/online-shop](https://github.com/stanleyclaudius/job-portal)
+Project Link: [https://github.com/stanleyclaudius/library-api](https://github.com/stanleyclaudius/library-api)
 
 <p align="right"><a href="#top">back to top</a></p>
 
